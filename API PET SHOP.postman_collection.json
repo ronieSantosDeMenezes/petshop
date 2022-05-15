@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "147040bd-19ef-41b2-8b79-e865b79b54e7",
+		"name": "API PET SHOP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "resgatar clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/PetShop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"PetShop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cliente\": \"Julia\",\r\n    \"animal\": \"doguinho\",\r\n    \"raca\": \"box\",\r\n    \"valor\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/PetShop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"PetShop"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
