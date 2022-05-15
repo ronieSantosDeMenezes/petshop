@@ -22,25 +22,22 @@ app.get('/petshop', async (req, res) =>{
     } catch (error) {
         res.json({error:'porrrra'})
     }
-
-
 })
 
-app.post('/petshop',(req,res) =>{
+app.post('/petshop',(req,res) => {
 
     const {cliente, animal, raca, valor} = req.body
-
     if(cliente == ''){
-        res.json({message: 'O nome do cliente é obrigatorio'})
+        return res.json({message: 'O nome do cliente é obrigatorio'})
     }
     if(animal == ''){
-        res.json({message: 'O nome do animal é obrigatorio!'})
+        return res.json({message: 'O nome do animal é obrigatorio!'})
     }
     if(raca == ''){
-        res.json({message: 'É obrigatorio preencher o campo !'})
+        return res.json({message: 'É obrigatorio preencher o campo !'})
     }
     if(valor == '' ){
-        res.json({message: 'É obrigatorio preencher o campo !'})
+        return res.json({message: 'É obrigatorio preencher o campo !'})
     }
     const petshop = {
         cliente,
